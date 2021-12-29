@@ -1,26 +1,13 @@
     <section id="header-slider" class="owl-carousel">
-            <div class="item">
+           @foreach ($sliders as $slider)
+                <div class="item">
                 <div class="container">
                     <div class="header-content">
-                        <h1 class="header-title">BEST FOOD</h1>
-                        <p class="header-sub-title">create your own slogan</p>
+                        <h1 class="header-title">{{ $slider->title }}</h1>
+                        <p class="header-sub-title">{{ $slider->sub_title }}</p>
                     </div> <!-- /.header-content -->
                 </div>
             </div>
-            <div class="item">
-                <div class="container">
-                    <div class="header-content">
-                        <h1 class="header-title">BEST SNACKS</h1>
-                        <p class="header-sub-title">create your own slogan</p>
-                    </div> <!-- /.header-content -->
-                </div>
-            </div>
-            <div class="item">
-                <div class="container">
-                    <div class="header-content text-right pull-right">
-                        <h1 class="header-title">BEST DRINKS</h1>
-                        <p class="header-sub-title">create your own slogan</p>
-                    </div> <!-- /.header-content -->
-                </div>
-            </div>
+           @endforeach
+            
         </section>

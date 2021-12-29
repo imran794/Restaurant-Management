@@ -1,6 +1,6 @@
 @extends('layouts.backend.app')
 
-@section('title','Slider Index')
+@section('title','Create Category')
 
 @push('css')
 <link rel="stylesheet" href="{{ asset('css/dataTables.bootstrap4.min.css') }}">
@@ -18,9 +18,9 @@
             <div>Slider</div>
         </div>
         <div class="page-title-actions">
-            <a href="{{ route('app.sliders.create') }}" class="btn-shadow mr-3 btn btn-info">
+            <a href="{{ route('app.category.create') }}" class="btn-shadow mr-3 btn btn-info">
                 <i class="fa fa-plus-circle"></i>
-                Create Sliders
+                Create Category
             </a>
         </div>
     </div>
@@ -34,32 +34,26 @@
                     <thead>
                         <tr>
                             <th class="text-center">#</th>
-                            <th>Title</th>
-                            <th class="text-center">Sub Title</th>
-                            <th class="text-center">Image</th>
+                            <th class="text-center">Name</th>
+                            <th class="text-center">Slug</th>
                             <th class="text-center">Updated At</th>
                             <th class="text-center">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($Sliders as $key=>$Slider)
+                        @foreach ($categories as $key=>$category)
                         <tr>
                             <td class="text-center text-muted">#{{ $key +1 }}</td>
-                            <td class="text-center">{{ $Slider->title }}</td>
-                            <td class="text-center">{{ $Slider->sub_title }}</td>
+                            <td class="text-center">{{ $category->name }}</td>
+                            <td class="text-center">{{ $category->slug }}</td>
+                            <td class="text-center">{{ $category->updated_at->diffForHumans() }}</td>
                             <td class="text-center">
-                                 <img width="100" src="{{ Storage::disk('public')->url('slider/'.$Slider->image) != null ? Storage::disk('public')->url('slider/'.$Slider->image) : config('app.placeholder').'160' }}" alt="image">
-                            </td>
-
-                        
-                            <td class="text-center">{{ $Slider->updated_at->diffForHumans() }}</td>
-                            <td class="text-center">
-                                <a href="{{ route('app.sliders.edit',$Slider->id) }}" class="btn btn-primary btn-sm"> <i class="fas fa-edit"></i> Edit</a>
+                                <a href="{{ route('app.category.edit',$category->id) }}" class="btn btn-primary btn-sm"> <i class="fas fa-edit"></i> Edit</a>
                               
-                                <button class="btn btn-sm btn-danger waves-effect" type="button" onclick="deleteat({{ $Slider->id }})">
+                                <button class="btn btn-sm btn-danger waves-effect" type="button" onclick="deleteat({{ $category->id }})">
                                     <i class="fas fa-trash"></i> Delete
                                 </button>
-                                <form id="delete-form-{{ $Slider->id }}" action="{{ route('app.sliders.destroy',$Slider->id) }}" method="POST" style="display: none;">
+                                <form id="delete-form-{{ $category->id }}" action="{{ route('app.category.destroy',$category->id) }}" method="POST" style="display: none;">
                                     @csrf
                                     @method('DELETE')
                                 </form>

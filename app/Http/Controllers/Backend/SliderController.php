@@ -21,7 +21,7 @@ class SliderController extends Controller
     public function index()
     {
          Gate::authorize('app.slider.index');
-        $Sliders = Slider::latest('id')->get();
+         $Sliders = Slider::latest('id')->get();
         return view('backend.slider.index',compact('Sliders'));
     }
 

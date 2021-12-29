@@ -18,6 +18,21 @@
         <link rel="stylesheet" href="{{ asset('frontend/css/main.css') }}">
 
         <!-- Styles -->
+
+        <style>
+
+        @foreach ($sliders as $key=> $slider)
+  
+       .owl-carousel .owl-wrapper, .owl-carousel .owl-item:nth-child({{ $key+ 1 }}) .item
+        {
+            background: url({{ Storage::disk('public')->url('slider/'.$slider->image) }});
+            background-size: cover;
+        }
+        @endforeach
+                    
+        </style>
+
+
       
     </head>
         <body data-spy="scroll" data-target="#template-navbar">

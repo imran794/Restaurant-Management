@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Slider;
+use App\Models\Item;
+use App\Models\Category;
 
 class HomeController extends Controller
 {
@@ -27,7 +29,9 @@ class HomeController extends Controller
     public function home()
     {
         return view('welcome',[
-            'sliders'  => Slider::latest('id')->get()
+            'sliders'  => Slider::latest('id')->get(),
+            'items'  => Item::latest('id')->get(),
+            'categories'  => Category::latest('id')->get(),
         ]);
     }
 }

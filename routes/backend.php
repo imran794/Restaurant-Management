@@ -12,6 +12,7 @@ use App\Http\Controllers\Backend\SettingController;
 use App\Http\Controllers\Backend\MenuBuliderController;
 use App\Http\Controllers\Backend\SliderController;
 use App\Http\Controllers\Backend\CategoryController;
+use App\Http\Controllers\Backend\ItemController;
 
 
 /*
@@ -61,6 +62,9 @@ Route::resource('sliders', SliderController::class);
 // category
 
 Route::resource('category', CategoryController::class);
+
+//item
+Route::resource('item', ItemController::class);
 
 
 // Menu

@@ -60,7 +60,7 @@ class UserController extends Controller
         // ]);
 
             $avatar = $request->file('avatar');
-            $slug  =  $slug = Str::lower($request->name);
+            $slug  = Str::lower($request->name);
          
           if (isset($avatar))
         {

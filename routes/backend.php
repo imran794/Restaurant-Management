@@ -13,6 +13,7 @@ use App\Http\Controllers\Backend\MenuBuliderController;
 use App\Http\Controllers\Backend\SliderController;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\ItemController;
+use App\Http\Controllers\Backend\ReservationShowController;
 
 
 /*
@@ -65,6 +66,11 @@ Route::resource('category', CategoryController::class);
 
 //item
 Route::resource('item', ItemController::class);
+
+// reservation show
+Route::get('reservation/show',[ReservationShowController::class, 'Show'])->name('reservation');
+Route::put('reservation/status/{id}',[ReservationShowController::class, 'Status'])->name('reservation.status');
+Route::DELETE('reservation/destroy/{id}',[ReservationShowController::class, 'Destroy'])->name('reservation.destroy');
 
 
 // Menu

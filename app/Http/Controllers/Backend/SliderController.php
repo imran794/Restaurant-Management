@@ -55,7 +55,7 @@ class SliderController extends Controller
         ]);
 
             $image = $request->file('image');
-            $slug  = Str::lower($request->title);
+            $slug  = Str::slug($request->title);
          
           if (isset($image))
         {
@@ -129,7 +129,7 @@ class SliderController extends Controller
         ]);
 
             $image = $request->file('image');
-            $slug  = Str::lower($request->title);
+            $slug  = Str::slug($request->title);
          
           if (isset($image))
         {

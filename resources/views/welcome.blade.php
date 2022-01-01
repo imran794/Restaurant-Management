@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="{{ asset('frontend/css/flexslider.css') }}">
         <link rel="stylesheet" href="{{ asset('frontend/css/pricing.css') }}">
         <link rel="stylesheet" href="{{ asset('frontend/css/main.css') }}">
+        <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap-datetimepicker.min.css') }}">
 
         <!-- Styles -->
 
@@ -164,7 +165,19 @@
         <script src="{{ asset('frontend/js/jquery.validate.js') }}"></script>
         <script type="text/javascript" src="{{ asset('frontend/js/jquery.hoverdir.js') }}"></script>
         <script type="text/javascript" src="{{ asset('frontend/js/jQuery.scrollSpeed.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('frontend/js/bootstrap-datetimepicker.min.js') }}"></script>
         <script src="{{ asset('frontend/js/script.js') }}"></script>
+
+        <script>
+            $(function(){
+               $('#datetimepicker1').datetimepicker({
+                format:       'dd MM yyyy - HH:11 P',
+                shwoMeridian:  true,
+                autoclose:  true,
+                todayBtn:  true,
+                });
+            })
+        </script>
         
 
     </body>

@@ -17,6 +17,7 @@
         <link rel="stylesheet" href="{{ asset('frontend/css/pricing.css') }}">
         <link rel="stylesheet" href="{{ asset('frontend/css/main.css') }}">
         <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap-datetimepicker.min.css') }}">
+        <link href="{{ asset('css/iziToast.css') }}" rel="stylesheet">
 
         <!-- Styles -->
 
@@ -56,58 +57,6 @@
         <!--==  7. Afordable Pricing  ==-->
       @include('frontend/pricing')
     
-
-
-        <!--== 8. Great Place to enjoy ==-->
-          @include('frontend/great_place')
-                   <!-- /#great-place-to-enjoy -->
-
-
-
-        <!--==  9. Our Beer  ==-->
-       @include('frontend/beer')
-     
-
-
-
-
-        <!--== 10. Our Breakfast Menu ==-->
-         @include('frontend/breakfast')
-        
-        <!-- /#breakfast -->
-
-
-
-        <!--== 11. Our Bread ==-->
-         @include('frontend/bread')
-         
-
-
-
-
-        <!--== 12. Our Featured Dishes Menu ==-->
-        @include('frontend/featured_dish')
-       
-        <!-- /#featured-dish -->
-
-
-
-
-        <!--== 13. Menu List ==-->
-       @include('frontend/menu_list')
-       
-
-
-
-        <!--== 14. Have a look to our dishes ==-->
-       @include('frontend/have_a_look')
-      
-
-
-
-        <!--== 15. Reserve A Table! ==-->
-     @include('frontend/table')
-  
      
          <!-- /#reserve -->
    @include('frontend/reservation')
@@ -167,6 +116,9 @@
         <script type="text/javascript" src="{{ asset('frontend/js/jQuery.scrollSpeed.js') }}"></script>
         <script type="text/javascript" src="{{ asset('frontend/js/bootstrap-datetimepicker.min.js') }}"></script>
         <script src="{{ asset('frontend/js/script.js') }}"></script>
+        <script src="{{ asset('js/iziToast.js') }}"></script>
+        @include('vendor.lara-izitoast.toast')
+
 
         <script>
             $(function(){

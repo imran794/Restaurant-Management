@@ -17,10 +17,7 @@
                 <div class="collapse navbar-collapse" id="Food-fair-toggle">
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#about">about</a></li>
-                        <li><a href="#pricing">pricing</a></li>
-                        <li><a href="#great-place-to-enjoy">beer</a></li>
-                        <li><a href="#breakfast">bread</a></li>
-                        <li><a href="#featured-dish">featured</a></li>
+                        <li><a href="#pricing">Menu List</a></li>
                         <li><a href="#reserve">reservation</a></li>
                         <li><a href="#contact">contact</a></li>
                     </ul>

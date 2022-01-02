@@ -5,6 +5,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ReservationController;
+use App\Http\Controllers\ContactController;
 
 
 
@@ -44,5 +45,9 @@ Route::get('{slug}',[PageController::class, 'index'])->name('page');
 Route::post('reservation',[ReservationController::class, 'Store'])->name('reservation.store');
 
 
+
+// contact
+
+Route::post('contact/store',[ContactController::class, 'Store'])->name('contact.store');
 
 

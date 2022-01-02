@@ -6,12 +6,11 @@
                             <div class="row">
                                 <div class="col-md-10 col-md-offset-1">
                                     <div class="section-header">
-                                        <h2 class="pricing-title">Affordable Pricing</h2>
+                                        <h2 class="pricing-title">Menu List</h2>
                                         <ul id="filter-list" class="clearfix">
                                             <li class="filter" data-filter="all">All</li>
                                             @foreach ($categories as $category)
                                             <li class="filter" data-filter="#{{ $category->slug }}">{{ $category->name }}
-                                                <span class="badge">{{ $category->items->count() }}</span>
                                             </li>
                                             @endforeach
                                             {{-- <li class="filter" data-filter=".special">Special</li>
@@ -46,10 +45,6 @@
                                 </li>
                             @endforeach
                             </ul>
-
-                            <!-- <div class="text-center">
-                                    <a id="loadPricingContent" class="btn btn-middle hidden-sm hidden-xs">Load More <span class="caret"></span></a>
-                            </div> -->
 
                         </div>   
                     </div>

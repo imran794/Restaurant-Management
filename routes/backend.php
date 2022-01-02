@@ -14,6 +14,7 @@ use App\Http\Controllers\Backend\SliderController;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\ItemController;
 use App\Http\Controllers\Backend\ReservationShowController;
+use App\Http\Controllers\Backend\ContactController;
 
 
 /*
@@ -73,6 +74,9 @@ Route::put('reservation/status/{id}',[ReservationShowController::class, 'Status'
 Route::DELETE('reservation/destroy/{id}',[ReservationShowController::class, 'Destroy'])->name('reservation.destroy');
 
 
+
+
+
 // Menu
 
 Route::resource('menus', MenuController::class)->except(['show']);
@@ -107,3 +111,9 @@ Route::group([ 'as' => 'setting.', 'prefix' => 'setting'], function() {
 
 
 });
+
+//contact
+
+Route::get('contact/show',[ContactController::class, 'Show'])->name('contact.show');
+Route::DELETE('contact/destroy/{id}',[ContactController::class, 'ContactDestroy'])->name('contact.destroy');
+Route::get('contact/details/{id}',[ContactController::class, 'ContactDetails'])->name('contact.details');

@@ -155,6 +155,8 @@ class UserController extends Controller
         
             Image::make($avatar)->resize(350, 350)->save(storage_path('app/public/avatar').'/'.$imagename);
 
+        }else{
+             $imagename = $user->avatar;
         }
 
         $user->update([

@@ -1,4 +1,4 @@
-<section class="reservation">
+<section class="reservation" id="reserve">
             <img class="img-responsive section-icon hidden-sm hidden-xs" src="{{ asset('frontend/images/icons/reserve_color.png') }}">
             <div class="wrapper">
                 <div class="container-fluid">
